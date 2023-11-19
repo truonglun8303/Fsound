@@ -15,13 +15,143 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+  font-family: font-chill;
+  src: url(./Material-font/NightPumpkind-nRORO.otf),
+  url(./Material-font/NightPumpkind-1GpGv.ttf);
+}
+html,body,main {
+  font-family: font-chill;
+  border: none;
+  height: 100%;
+  width: auto;
+  margin: 0;
+  overflow: hidden;
+}
+.container{
+  position: relative;
+  max-width: 100%;
+  height: 100%;
+}
+.Study-room:disabled{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+iframe{
+  z-index: -1;
+  pointer-events:none;
+  border: 0;
+  outline: none;
+  height: calc((100vw*8) /14.2);
+}
+.Navheader{
+  background-image: linear-gradient(black,rgba(0, 0, 0,0.9));
+  width: 100%;
+  height: 50px;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  /* box-shadow: 
+        0 30px 10px 1px 
+            rgb(49, 47, 47,0.9); */
+            box-shadow: 
+            0 30px 10px 1px 
+                rgba(0, 0, 0, 0.9);
+}
+.Category{
+  font-family: font-chill;
+  display: flex;
+  align-items: center;
+  width: 60%;
+  justify-content: space-evenly;
+}
+.Navheader button{
+    font-size: 20px;
+    position: relative;
+    top: 50%;
+    border-radius: 30px;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.Navheader img{
+  margin-left: 5px;
+}
+.BrandName{
+  color: rgb(206, 206, 206);
+  font-family: font-chill;
+  text-align: center;
+  position: absolute;
+}
+.Sayings{
+  top: 80px;
+  color:rgb(227, 232, 238);
+  position: absolute;
+}
+.ControlAll{
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  position: absolute;
+  bottom: 5px;
+  border-radius: 10px;
+  left: 2.5%;
+  background: rgb(11,11,7,0.5);
+}
+.ControlMusic button,
+.Mix-Sound button{
+  width: 50px;
+  height: 50px;
+  border: solid 1px white;
+  border-radius: 100%;
+  color: aliceblue;
+}
+.ControlMusic{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid rgb(170, 167, 167);
+  border-right: 1px solid rgb(170, 167, 167);
+  border-radius: 10px;
+  justify-content: space-evenly;
+}
+.Control-Sound{
+  display: flex;
+  width: 30%;
+  align-items: center;
+  justify-content: space-evenly;
+  border-left: 1px solid rgb(170, 167, 167);
+  border-right: 1px solid rgb(170, 167, 167);
+  border-radius: 10px;
+  height: 100%;
+}
+.key-control{
+  border: 0.3px solid white;
+  border-radius: 14px;
+  color: white;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  background: rgb(11,11,7,0.5);
+}
+#DonateCf{
+  position: absolute;
+  width: 200px;
+  font-size: 15px;
+  top: 110px;
+  left: 42%;
 }
